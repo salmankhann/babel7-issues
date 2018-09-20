@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="565ad545-d4aa-4c83-985b-1b849e6982d6" name="salmanhasratkhan@MacBook-Pro-2.local 2018-09-20T06:54:34.354Z" runUser="salmanhasratkhan" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Jest test run" id="c9a15cfb-a4aa-4ab6-9424-23d0e3f91f38"/>
+  <Times creation="2018-09-20T06:54:34.354Z" queuing="2018-09-20T06:54:34.354Z" start="2018-09-20T06:54:34.354Z"/>
+  <ResultSummary outcome="Failed">
+    <Counters total="0" executed="0" passed="0" failed="0" error="0"/>
+  </ResultSummary>
+  <TestDefinitions/>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda"/>
+  </TestLists>
+  <TestEntries/>
+  <Results/>
+</TestRun>

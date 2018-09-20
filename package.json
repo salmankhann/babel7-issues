@@ -1,0 +1,78 @@
+{
+  "name": "reports",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "ci": "jest --silent",
+    "coverage": "jest --coverage --silent",
+    "start": "node_modules/.bin/webpack-dev-server --progress --colors --watch",
+    "build": "node_modules/.bin/webpack --progress --colors --watch",
+    "release": "node_modules/.bin/webpack --progress --colors --config webpack.production.config.js",
+    "lint": "node_modules/.bin/eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-object-assign": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.0.0",
+    "create-if-not-exist": "^0.0.2",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.4.1",
+    "jest-cli": "^23.4.1",
+    "jest-trx-results-processor": "^0.0.7",
+    "regenerator-runtime": "^0.12.1",
+    "string-replace-webpack-plugin": "^0.1.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "core-js": "^2.5.5"
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs",
+      "enzyme"
+    ],
+    "roots": [
+      "<rootDir>/__tests__"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(^generic-)/i",
+      "node_modules/react-infinite-scroller"
+    ],
+    "setupFiles": [
+      "./jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "testResultsProcessor": "./jestTrxProcessor",
+    "verbose": true
+  }
+}
